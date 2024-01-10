@@ -1,0 +1,21 @@
+{
+  "name": "rentsolution",
+  "version": "1.0.0",
+  "description": "A Backend which will support CRUD operations using mongodb where a landlord and tenant can connect",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Farhan",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.26.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.4.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
+  }
+}
