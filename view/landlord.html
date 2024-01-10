@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>RentSolution</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="box3">RentSolution</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>Landlord</li>
+        <li><a href="tenant.html">Tenant</a></li>
+    </ul>
+    <div class="tab" style="justify-content: space-between;">
+        <p style="font-size: 50px;">Welcome to the Landlord's Main Menu</p><br>
+        <button class="tablinks">Add</button><br>
+        <p>Click Add to Register your house to Rent</p>
+        <button class="tablinks">Find</button><br>
+        <p>Click Find to find a specific Landlord's name and listed address </p> <br>    
+        <button id="btn-list-all" class="tablinks">List</button> <br>
+        <p>Click List to see all available listings </p> <br>      
+      </div>
+      
+      <div id="add-contact-tab" class="tabcontent">
+        <form>
+            <label for="add-name">Enter your name: </label>
+            <input type="text" id="add-name" name="name">
+            <label for="add-email">Enter your email: </label>
+            <input type="text" id="add-email" name="email">
+            <label for="add-telephone">Enter your Phone: </label>
+            <input type="text" id="add-telephone" name="telephone">
+            <label for="add-address">Enter the Full Address with postal code: </label>
+            <input type="text" id="add-address" name="address">
+            <div>
+                <button id="add-contact-btn">Add</button>
+                <p>After Checking all the info, register your listing by clicking add</p>
+                <output id="add-out"></output>
+            </div>            
+        </form>
+      </div>
+      
+      <div id="find-contact" class="tabcontent">
+        <form>
+            <label for="find-name">Enter the name of the Landlord that you want to see the listing of/Update your info if you are a Landlord</label>
+           
+            <input type="text" id="find-name-search">
+            <div>
+                <button id="btn-find-contact">Find</button>
+                <output id="find-out"></output>
+            </div>
+        </form>
+        <hr>
+        <h2>Retrieved information of the requested Landlord</h2>
+        <div class="flex-container">            
+            <label for="find-name">Name of the Landlord</label>
+            <input type="text" id="find-name">
+            <label for="find-email">Email of the Landlord</label>
+            <input type="text" id="find-email">
+            <label for="find-telephone">Telephone of the Landlord</label>
+            <input type="text" id="find-telephone">
+            <label for="find-address">Address/House available for Rent</label>
+            <input type="text" id="find-address">
+        </div>    
+        <h2>You can also use this Latitude and Longitude to get the exact location in Google</h2>
+        <div class="flex-container">            
+            <label for="find-provider">Provider</label>
+            <input type="text" id="find-provider">
+            <label for="find-lat">Latitude</label>
+            <input type="text" id="find-lat">
+            <label for="find-lon">Longitude</label>
+            <input type="text" id="find-lon">
+            
+        </div>        
+        <div class="flex-button-container">
+            <button id="btn-update-contact">Update</button>
+            <p>For Lanlords: Use the update or delete to update/delete your listing</p>
+            <button id="btn-delete-contact">Delete</button>
+            <output id="update-delete-out"></output>
+        </div>
+      </div>
+      <div id="list-contacts" class="tabcontent"></div>   
+      <script src="./main.js"></script>   
+      <script src="./add.js"></script>   
+      <script src="./find.js"></script>   
+      <script src="./list.js"></script>                     
+</body>

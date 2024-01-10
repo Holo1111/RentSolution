@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>RentSolution</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="box2">RentSolution</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="landlord.html">Landlord</a></li>
+        <li>Tenant</li>
+    </ul>
+    <div class="tab" style="justify-content: space-between;">
+        <p style="font-size: 50px;">Welcome to the Tenant's Main Menu</p><br>
+        <button class="tablinks">Add</button> <br>
+        <p>Click Add to Register your Information to share with all the Landlords</p>
+        <button class="tablinks">Find</button> <br>
+        <p>Click Find to find a specific Tenant's Info and their preferred Listing </p> <br>            
+        <button id="btn-list-all" class="tablinks">List</button> <br>
+        <p>Click List to see all available prefferred listings </p> <br>         
+      </div>
+      
+      <div id="add-contact-tab" class="tabcontent">
+        <form>
+            <label for="add-name">Enter your name:</label>
+            <input type="text" id="add-name" name="name">
+            <label for="add-email">Enter your email: </label>
+            <input type="text" id="add-email" name="email">
+            <label for="add-telephone">Enter your telephone: </label>
+            <input type="text" id="add-telephone" name="telephone">
+            <label for="add-address">Enter the preferred address for the landlords to see: </label>
+            <input type="text" id="add-address" name="address">
+            <div>
+                <button id="add-contact-btn">Add</button>
+                <p>After Checking all the infos, register your informations by clicking add</p>
+                <output id="add-out"></output>
+            </div>            
+        </form>
+      </div>
+      
+      <div id="find-contact" class="tabcontent">
+        <form>
+            <label for="find-name">Enter the name of the tenant that you want to get in touch with/Update your info if you are a Tenant</label>
+            <input type="text" id="find-name-search">
+            <div>
+                <button id="btn-find-contact">Find</button>
+                <output id="find-out"></output>
+            </div>
+        </form>
+        <hr>
+        <h2>Retrieved information of the requested Tenant</h2>
+        <div class="flex-container">            
+            <label for="find-name">Name of the Tenant: </label>
+            <input type="text" id="find-name">
+            <label for="find-email">Email of the Tenant: </label>
+            <input type="text" id="find-email">
+            <label for="find-telephone">Telephone of the Tenant: </label>
+            <input type="text" id="find-telephone">
+            <label for="find-address">Preferred address listed by the Tenant: </label>
+            <input type="text" id="find-address">
+        </div>    
+        <h2>You can also use this Latitude and Longitude to get the exact location in Google(if available)</h2>
+        <div class="flex-container">            
+            <label for="find-provider">Provider</label>
+            <input type="text" id="find-provider">
+            <label for="find-lat">Latitude</label>
+            <input type="text" id="find-lat">
+            <label for="find-lon">Longitude</label>
+            <input type="text" id="find-lon">
+           
+        </div>        
+        <div class="flex-button-container">
+            <button id="btn-update-contact">Update</button>
+            <p>For Tenants: Use the update or delete to update/delete your informations</p>
+            <button id="btn-delete-contact">Delete</button>
+            <output id="update-delete-out"></output>
+        </div>
+      </div>
+      <div id="list-contacts" class="tabcontent"></div>   
+      <script src="./main.js"></script>   
+      <script src="./addTenant.js"></script>   
+      <script src="./findTenants.js"></script>   
+      <script src="./listsTenants.js"></script>                     
+</body>
